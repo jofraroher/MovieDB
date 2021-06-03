@@ -13,6 +13,7 @@ enum APIService {
     case allMoviesRequest
     case allTopRated
     case allUpcoming
+    case getMovieDetails(id: Int)
 }
 
 extension APIService: TargetType {
@@ -31,6 +32,8 @@ extension APIService: TargetType {
             return URL(string: "https://api.themoviedb.org/3/movie/top_rated")!
         case .allUpcoming:
             return URL(string: "https://api.themoviedb.org/3/movie/upcoming")!
+        case .getMovieDetails(let id):
+            return URL(string: "http://api.themoviedb.org/3/movie/\(id)/videos")!
         }
     }
 
@@ -47,6 +50,8 @@ extension APIService: TargetType {
         case .allTopRated:
             return .get
         case .allUpcoming:
+            return .get
+        case .getMovieDetails:
             return .get
         }
     }
@@ -80,6 +85,11 @@ extension APIService: TargetType {
             return parameters
             
         case .allUpcoming:
+            var parameters = [String:Any]()
+            parameters["api_key"] = API_KEY
+            return parameters
+
+        case .getMovieDetails:
             var parameters = [String:Any]()
             parameters["api_key"] = API_KEY
             return parameters
