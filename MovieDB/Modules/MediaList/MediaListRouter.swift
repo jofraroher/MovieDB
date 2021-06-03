@@ -12,13 +12,12 @@ import UIKit
 final class MediaListRouter: MediaListRouterProtocol {
     func navigate(to route: MediaListRoutes) {
         switch route {
-        case .showMediaDetail( _):
-//            let mediaDetailView = MediaDetailBuilder.make(media: media)
-//            view.show(mediaDetailView, sender: nil)
+        case .showMediaDetail(let media):
+            let mediaDetailView = MediaDetailBuilder.make(media: media)
+            view.show(mediaDetailView, sender: nil)
             break
         }
     }
-
 
     let view: UIViewController
 

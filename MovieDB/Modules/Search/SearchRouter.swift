@@ -27,8 +27,9 @@ final class SearchRouter: SearchRouterProtocol {
             }
             let listView = MediaListBuilder.make(media: mediaArray)
             view.show(listView, sender: nil)
-        case .showMediaDetail(_):
-            break
+        case .showMediaDetail(let media):
+            let mediaDetailView = MediaDetailBuilder.make(media: media)
+            view.show(mediaDetailView, sender: nil)
         }
     }
 }
