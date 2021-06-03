@@ -17,28 +17,33 @@ protocol SearchViewProtocol: class {
 
 enum Categories {
     case popular
+    case topRated
+    case upcoming
 
     var title : String {
         switch self {
         case .popular: return "Popular"
+        case .topRated: return "Top Rated"
+        case .upcoming: return "Upcoming"
         }
     }
 
     var image: UIImage {
            switch self {
                case .popular: return UIImage(named: "popular")!
+               case .topRated: return UIImage(named: "star")!
+               case .upcoming: return UIImage(named: "upcoming")!
            }
        }
+
 }
 
 // MARK: - Interactor
 
 protocol SearchInteractorProtocol: class {
     var interactorOutputDelegate: SearchInteractorDelegate? { get set }
-    func search(title: String, type: String?, year: String?) -> Observable<[Media]>
+    func search(title: String) -> Observable<[Media]>
     func loadMovies(category: Categories) -> Observable<[Media]>
-    func getYearsData()
-    func getTypesData()
     func fetchLocalData() -> [Media]
 }
 
@@ -50,17 +55,13 @@ enum SearchInteractorOutput {
     case setLoading(Bool)
     case getMediaList([Media])
     case allMovies([Media])
-    case showYears([String])
-    case showTypes([String])
 }
 
 // MARK: - Presenter
 
 protocol SearchPresenterProtocol: class {
-    func search(title: String, type: String?, year: String?)
+    func search(title: String)
     func loadMovies()
-    func getYearsData()
-    func getTypesData()
     func validateNameField(name: String?)
     func showMediaList(mediaArray: [Media])
     func showMediaDetail(media: Media)
@@ -71,8 +72,6 @@ enum SearchPresenterOutput {
     case setLoading(Bool)
     case searchResults([Media])
     case allMovies([Media])
-    case showYears([String])
-    case showTypes([String])
     case isValidName(Bool)
 }
 

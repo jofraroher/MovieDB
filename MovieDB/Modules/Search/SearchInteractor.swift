@@ -18,39 +18,11 @@ class SearchInteractor: SearchInteractorProtocol {
 
     let moyaProvider = MoyaProvider<APIService>(plugins: [NetworkLoggerPlugin()])
 
-    func getYearsData() {
-        var years: [String] = []
-
-        let currentYear = Calendar.current.component(.year, from: Date())
-
-        for year in 1900 ... currentYear {
-            years.insert(String(year), at: 0)
-        }
-
-        self.interactorOutputDelegate?.handleInteractorOutput(.showYears(years))
-    }
-
-    func getTypesData() {
-        let types: [String] = [
-            "Movies",
-            "Series",
-            "Episode"
-        ]
-
-        self.interactorOutputDelegate?.handleInteractorOutput(.showTypes(types))
-    }
-
-    func search(title: String, type: String?, year: String?) -> Observable<[Media]>{
+    func search(title: String) -> Observable<[Media]>{
         interactorOutputDelegate?.handleInteractorOutput(.setLoading(true))
 
-        let target: APIService
-
-        if type == "Series" || type == "Episode" {
-            target = .searchMovies(title: title, type: type, year: year)
-        } else {
-            target = .searchMovies(title: title, type: type, year: year)
-        }
-
+        let target: APIService = .searchMovies(title: title)
+        
         return moyaProvider.rx.request(target)
                 .debug()
                 .filterSuccessfulStatusCodes()
@@ -76,6 +48,10 @@ class SearchInteractor: SearchInteractorProtocol {
         switch category {
             case .popular:
                 target = .allMoviesRequest
+            case .topRated:
+                target = .allTopRated
+            case .upcoming:
+                target = .allUpcoming
         }
 
         return moyaProvider.rx.request(target)

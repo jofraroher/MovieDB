@@ -34,16 +34,8 @@ final class SearchPresenter: SearchPresenterProtocol {
 
     }
 
-    func getYearsData() {
-        interactor.getTypesData()
-    }
-
-    func getTypesData() {
-        interactor.getYearsData()
-    }
-
-    func search(title: String, type: String?, year: String?) {
-        interactor.search(title: title, type: type, year: year)
+    func search(title: String) {
+        interactor.search(title: title)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] mediaArray in
                 self?.view.handlePresenterOutput(.searchResults(mediaArray))
@@ -97,10 +89,6 @@ extension SearchPresenter: SearchInteractorDelegate {
             view.handlePresenterOutput(.allMovies(movies))
         case .getMediaList(let medias):
             view.handlePresenterOutput(.searchResults(medias))
-        case .showYears(let years):
-            view.handlePresenterOutput(.showYears(years))
-        case .showTypes(let types):
-            view.handlePresenterOutput(.showTypes(types))
         }
     }
 }
