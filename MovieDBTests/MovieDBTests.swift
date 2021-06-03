@@ -7,9 +7,13 @@
 //
 
 import XCTest
+import RxSwift
+
 @testable import MovieDB
 
 class MovieDBTests: XCTestCase {
+
+    var disposeBag = DisposeBag()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +23,27 @@ class MovieDBTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func searchMovie() throws {
+        searchMovie(movieName:"Scarface")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func searchMovie(movieName: String){
+
+        let expectation =  self.expectation(description: "Search Request")
+
+        let interactor = SearchInteractor()
+        interactor.search(title: movieName)
+            .subscribe(onNext: { mediaArray in
+                XCTAssertGreaterThan(mediaArray.count, 0)
+                expectation.fulfill()
+            }, onError: { (error) in
+                print(error)
+            })
+            .disposed(by: disposeBag)
+        waitForExpectations(timeout: 10) { error in
+            if (error != nil) {
+                XCTFail("FAIL")
+            }
         }
     }
-
 }

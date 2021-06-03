@@ -20,6 +20,8 @@ class SearchViewController: UIViewController, SearchViewProtocol {
 
     // MARK: - Properties
 
+    let imageURL: String = "https://image.tmdb.org/t/p/w500/"
+
     var mediaArray: [Media]?
 
     private var isValidName: Bool = false {
@@ -73,7 +75,6 @@ class SearchViewController: UIViewController, SearchViewProtocol {
 
         presenter.loadMovies()
 
-        //MOVIE GRID LAYOUT
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
 
         layout.minimumLineSpacing = 20
@@ -82,25 +83,6 @@ class SearchViewController: UIViewController, SearchViewProtocol {
         let width = (view.frame.size.width - layout.minimumInteritemSpacing * 2) / 3.3
 
         layout.itemSize = CGSize(width: width, height: width * 3 / 2)
-
-        //GET GRID MOVIE DATA
-        getMoviesGridData()
-
-    }
-
-    private func getMoviesGridData(){
-        let url = URL(string: "https://api.themoviedb.org/3/movie/297762/similar?api_key=cc4602d7deb14f92087bebff9b9e03cb")!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let data = data {
-                _ = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-                self.collectionView.reloadData()
-            }
-        }
-        task.resume()
     }
 
     private func showAlert(title: String, message: String) {
@@ -123,6 +105,8 @@ class SearchViewController: UIViewController, SearchViewProtocol {
         searchTextField.resignFirstResponder()
 
         presenter.validateNameField(name: searchTextField.text)
+
+        searchTextField.text = ""
     }
 }
 
@@ -153,7 +137,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieGridCell", for: indexPath) as! MovieGridCell
         let movie = self.mediaArray?[indexPath.item]
-        let baseUrl = URL(string: "https://image.tmdb.org/t/p/w500/" + (movie?.poster ?? ""))
+        let baseUrl = URL(string: imageURL + (movie?.poster ?? ""))
 
         cell.posterImageView?.af.setImage(withURL: baseUrl!)
         cell.posterImageView?.tag = indexPath.row

@@ -13,12 +13,12 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
-        UITabBar.appearance().barTintColor =  UIColor(hexString: "#081c24")
+        UITabBar.appearance().barTintColor =  UIColor(hexString: "#562BD4")
         UITabBar.appearance().tintColor = .white
     }
 
     private func configureNavigationBar() {
-        UINavigationBar.appearance().barTintColor = UIColor(hexString: "#081c24")
+        UINavigationBar.appearance().barTintColor = UIColor(hexString: "#562BD4")
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
     }

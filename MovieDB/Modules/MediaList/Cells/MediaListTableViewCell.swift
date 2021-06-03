@@ -15,6 +15,8 @@ class MediaListTableViewCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var cellContainer: RoundedView!
 
+    let imagUrl: String = "https://image.tmdb.org/t/p/w500/"
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
@@ -27,7 +29,7 @@ class MediaListTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         titleLabel.text = title
         typeLabel.text = type
-        let baseUrl = URL(string: "https://image.tmdb.org/t/p/w500/" + imageURL)
+        let baseUrl = URL(string: imagUrl + imageURL)
         mediaImageView.af.setImage(withURL: baseUrl!)
     }
 }

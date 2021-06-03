@@ -41,7 +41,6 @@ final class SearchPresenter: SearchPresenterProtocol {
                 self?.view.handlePresenterOutput(.searchResults(mediaArray))
         }, onError: { (error) in
              print(error)
-             // HANDLE THE ERROR
         })
         .disposed(by: disposeBag)
     }
@@ -53,7 +52,6 @@ final class SearchPresenter: SearchPresenterProtocol {
                 self?.view.handlePresenterOutput(.allMovies(mediaArray))
         }, onError: { (error) in
             print(error)
-            // HANDLE THE ERROR
             self.view.handlePresenterOutput(.allMovies(self.interactor.fetchLocalData()))
         })
         .disposed(by: disposeBag)

@@ -59,7 +59,6 @@ class SearchInteractor: SearchInteractorProtocol {
                     .filterSuccessfulStatusCodes()
                     .asObservable()
                     .map{ response -> [Media] in
-                        // CUSTOM OBJECT MAPPING DUE TO MOYA DIFFICULTIES TO PARSE THE JSON RESPONSE FROM THE "The Movie Database" SERVER
                         let dataAux = try JSONSerialization.jsonObject(with: response.data, options: [])
                         if let json = dataAux as? [String: Any] {
                             if let results = json["results"] as? [[String: Any]] {
