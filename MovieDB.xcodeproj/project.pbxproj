@@ -57,7 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1168D19D26688B6C00C6C6FC /* MovieDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1168D19D26688B6C00C6C6FC /* Movie App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1168D1A026688B6C00C6C6FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1168D1A926688B6F00C6C6FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1168D1AC26688B6F00C6C6FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		1168D19E26688B6C00C6C6FC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1168D19D26688B6C00C6C6FC /* MovieDB.app */,
+				1168D19D26688B6C00C6C6FC /* Movie App.app */,
 				1168D1B326688B6F00C6C6FC /* MovieDBTests.xctest */,
 			);
 			name = Products;
@@ -362,7 +362,7 @@
 			);
 			name = MovieDB;
 			productName = MovieDB;
-			productReference = 1168D19D26688B6C00C6C6FC /* MovieDB.app */;
+			productReference = 1168D19D26688B6C00C6C6FC /* Movie App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1168D1B226688B6F00C6C6FC /* MovieDBTests */ = {
@@ -702,7 +702,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.francisco.MovieDB;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -721,7 +721,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.francisco.MovieDB;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Movie App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
