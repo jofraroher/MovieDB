@@ -10,6 +10,7 @@ target 'MovieDB' do
   pod 'ObjectMapper'
   pod 'AlamofireImage'
   pod 'RealmSwift'
+  pod 'YoutubePlayerView'
 
   target 'MovieDBTests' do
     inherit! :search_paths

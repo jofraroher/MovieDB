@@ -14,12 +14,14 @@ PODS:
   - RealmSwift (10.7.6):
     - Realm (= 10.7.6)
   - RxSwift (5.1.2)
+  - YoutubePlayerView (1.2.1)
 
 DEPENDENCIES:
   - AlamofireImage
   - Moya/RxSwift
   - ObjectMapper
   - RealmSwift
+  - YoutubePlayerView
 
 SPEC REPOS:
   trunk:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - RxSwift
+    - YoutubePlayerView
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -39,7 +42,8 @@ SPEC CHECKSUMS:
   Realm: ed860452717c8db8f4bf832b6807f7f2ce708839
   RealmSwift: e31c4ddbcc42ac879313d656b86f9ca539f6f4f4
   RxSwift: 1e2e1f9570186967f617e49128ed26ccf1bafc8e
+  YoutubePlayerView: 3870fc10f2db3f54156697757f44d304203bdc7e
 
-PODFILE CHECKSUM: f55d39b504f59b4419d70f0907b786977eeebf86
+PODFILE CHECKSUM: dcc1531af409b864eaea085aa8da50b676fa9ac3
 
 COCOAPODS: 1.10.1
