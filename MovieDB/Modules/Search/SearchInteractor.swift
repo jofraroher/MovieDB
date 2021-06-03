@@ -46,7 +46,7 @@ class SearchInteractor: SearchInteractorProtocol {
         let target: APIService
 
         if type == "Series" || type == "Episode" {
-            target = .searchSeries(title: title, type: type, year: year)
+            target = .searchMovies(title: title, type: type, year: year)
         } else {
             target = .searchMovies(title: title, type: type, year: year)
         }
