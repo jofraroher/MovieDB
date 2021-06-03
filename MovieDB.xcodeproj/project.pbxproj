@@ -26,6 +26,16 @@
 		1168D1E626689BD700C6C6FC /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1E526689BD700C6C6FC /* SearchInteractor.swift */; };
 		1168D1E926689C2800C6C6FC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1E826689C2800C6C6FC /* APIService.swift */; };
 		1168D1EB26689CA000C6C6FC /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1EA26689CA000C6C6FC /* SearchPresenter.swift */; };
+		1168D1EE2668A72100C6C6FC /* MovieGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1ED2668A72100C6C6FC /* MovieGridCell.swift */; };
+		1168D1F12668B29600C6C6FC /* MediaList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1168D1F02668B29600C6C6FC /* MediaList.storyboard */; };
+		1168D1F32668B2EF00C6C6FC /* MediaListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1F22668B2EF00C6C6FC /* MediaListRouter.swift */; };
+		1168D1F52668B31F00C6C6FC /* MediaListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1F42668B31F00C6C6FC /* MediaListPresenter.swift */; };
+		1168D1F72668B33900C6C6FC /* MediaListContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1F62668B33900C6C6FC /* MediaListContracts.swift */; };
+		1168D1F92668B35F00C6C6FC /* MediaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1F82668B35E00C6C6FC /* MediaListBuilder.swift */; };
+		1168D1FB2668B37600C6C6FC /* MediaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1FA2668B37600C6C6FC /* MediaListViewController.swift */; };
+		1168D1FE2668B3A300C6C6FC /* MediaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D1FD2668B3A300C6C6FC /* MediaListTableViewCell.swift */; };
+		1168D2022668B40600C6C6FC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D2012668B40600C6C6FC /* RoundedView.swift */; };
+		1168D2042668B5FB00C6C6FC /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168D2032668B5FB00C6C6FC /* ShadowView.swift */; };
 		28DE9C77D3CE92A1B6AEFA11 /* Pods_MovieDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22307E015E7C97B37CCE0A93 /* Pods_MovieDBTests.framework */; };
 		BADA911DBD0429B8FF32408C /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35E9CBE8342794E08799D6B /* Pods_MovieDB.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +74,16 @@
 		1168D1E526689BD700C6C6FC /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		1168D1E826689C2800C6C6FC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		1168D1EA26689CA000C6C6FC /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		1168D1ED2668A72100C6C6FC /* MovieGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridCell.swift; sourceTree = "<group>"; };
+		1168D1F02668B29600C6C6FC /* MediaList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MediaList.storyboard; sourceTree = "<group>"; };
+		1168D1F22668B2EF00C6C6FC /* MediaListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListRouter.swift; sourceTree = "<group>"; };
+		1168D1F42668B31F00C6C6FC /* MediaListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListPresenter.swift; sourceTree = "<group>"; };
+		1168D1F62668B33900C6C6FC /* MediaListContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListContracts.swift; sourceTree = "<group>"; };
+		1168D1F82668B35E00C6C6FC /* MediaListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListBuilder.swift; sourceTree = "<group>"; };
+		1168D1FA2668B37600C6C6FC /* MediaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListViewController.swift; sourceTree = "<group>"; };
+		1168D1FD2668B3A300C6C6FC /* MediaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListTableViewCell.swift; sourceTree = "<group>"; };
+		1168D2012668B40600C6C6FC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		1168D2032668B5FB00C6C6FC /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		1C2BB75CBA056064793E3760 /* Pods-MovieDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBTests.release.xcconfig"; path = "Target Support Files/Pods-MovieDBTests/Pods-MovieDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		22307E015E7C97B37CCE0A93 /* Pods_MovieDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EF8237C069E8C3DA0A90DB9 /* Pods-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.debug.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +138,7 @@
 				1168D1C426688EAF00C6C6FC /* App */,
 				1168D1CD26688FC900C6C6FC /* Base */,
 				1168D1D02668901400C6C6FC /* Utils */,
+				1168D1FF2668B3E500C6C6FC /* Views */,
 				1168D1E726689C1600C6C6FC /* Network */,
 				1168D1E02668997100C6C6FC /* Entities */,
 				1168D1C926688F1B00C6C6FC /* Modules */,
@@ -150,8 +171,9 @@
 		1168D1C926688F1B00C6C6FC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1168D1D52668914800C6C6FC /* Search */,
 				1168D1CA26688F2E00C6C6FC /* MainView */,
+				1168D1D52668914800C6C6FC /* Search */,
+				1168D1EF2668B25F00C6C6FC /* MediaList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -200,6 +222,7 @@
 		1168D1D52668914800C6C6FC /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				1168D1EC2668A70C00C6C6FC /* Cells */,
 				1168D1D62668916600C6C6FC /* Search.storyboard */,
 				1168D1D82668918F00C6C6FC /* SearchViewController.swift */,
 				1168D1DC2668989E00C6C6FC /* SearchBuilder.swift */,
@@ -225,6 +248,53 @@
 				1168D1E826689C2800C6C6FC /* APIService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1168D1EC2668A70C00C6C6FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1168D1ED2668A72100C6C6FC /* MovieGridCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1168D1EF2668B25F00C6C6FC /* MediaList */ = {
+			isa = PBXGroup;
+			children = (
+				1168D1FC2668B39300C6C6FC /* Cells */,
+				1168D1F02668B29600C6C6FC /* MediaList.storyboard */,
+				1168D1F22668B2EF00C6C6FC /* MediaListRouter.swift */,
+				1168D1F42668B31F00C6C6FC /* MediaListPresenter.swift */,
+				1168D1F62668B33900C6C6FC /* MediaListContracts.swift */,
+				1168D1F82668B35E00C6C6FC /* MediaListBuilder.swift */,
+				1168D1FA2668B37600C6C6FC /* MediaListViewController.swift */,
+			);
+			path = MediaList;
+			sourceTree = "<group>";
+		};
+		1168D1FC2668B39300C6C6FC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1168D1FD2668B3A300C6C6FC /* MediaListTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1168D1FF2668B3E500C6C6FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1168D2002668B3F600C6C6FC /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1168D2002668B3F600C6C6FC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1168D2012668B40600C6C6FC /* RoundedView.swift */,
+				1168D2032668B5FB00C6C6FC /* ShadowView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8AAAA13BC13B75214C6651B4 /* Pods */ = {
@@ -334,6 +404,7 @@
 				1168D1AD26688B6F00C6C6FC /* LaunchScreen.storyboard in Resources */,
 				1168D1D72668916600C6C6FC /* Search.storyboard in Resources */,
 				1168D1AA26688B6F00C6C6FC /* Assets.xcassets in Resources */,
+				1168D1F12668B29600C6C6FC /* MediaList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,15 +489,24 @@
 				1168D1CF26688FD800C6C6FC /* BaseNavigationController.swift in Sources */,
 				1168D1E926689C2800C6C6FC /* APIService.swift in Sources */,
 				1168D1D22668902700C6C6FC /* HexToColor.swift in Sources */,
+				1168D2022668B40600C6C6FC /* RoundedView.swift in Sources */,
+				1168D1F52668B31F00C6C6FC /* MediaListPresenter.swift in Sources */,
 				1168D1E22668998500C6C6FC /* Media.swift in Sources */,
+				1168D1EE2668A72100C6C6FC /* MovieGridCell.swift in Sources */,
 				1168D1D92668918F00C6C6FC /* SearchViewController.swift in Sources */,
+				1168D1F72668B33900C6C6FC /* MediaListContracts.swift in Sources */,
+				1168D1FE2668B3A300C6C6FC /* MediaListTableViewCell.swift in Sources */,
+				1168D1F32668B2EF00C6C6FC /* MediaListRouter.swift in Sources */,
 				1168D1DD2668989E00C6C6FC /* SearchBuilder.swift in Sources */,
+				1168D2042668B5FB00C6C6FC /* ShadowView.swift in Sources */,
 				1168D1DF266898D200C6C6FC /* SearchContracts.swift in Sources */,
 				1168D1E626689BD700C6C6FC /* SearchInteractor.swift in Sources */,
 				1168D1C626688ED500C6C6FC /* AppContainer.swift in Sources */,
 				1168D1CC26688F4C00C6C6FC /* MainViewPresenter.swift in Sources */,
 				1168D1A126688B6C00C6C6FC /* AppDelegate.swift in Sources */,
 				1168D1DB2668979000C6C6FC /* MainViewController.swift in Sources */,
+				1168D1FB2668B37600C6C6FC /* MediaListViewController.swift in Sources */,
+				1168D1F92668B35F00C6C6FC /* MediaListBuilder.swift in Sources */,
 				1168D1C826688EF400C6C6FC /* AppRouter.swift in Sources */,
 				1168D1EB26689CA000C6C6FC /* SearchPresenter.swift in Sources */,
 				1168D1E426689B8D00C6C6FC /* SearchRouter.swift in Sources */,

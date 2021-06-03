@@ -9,8 +9,10 @@
 import Moya
 
 enum APIService {
-    case searchMovies(title: String, type: String?, year: String?)
+    case searchMovies(title: String)
     case allMoviesRequest
+    case allTopRated
+    case allUpcoming
 }
 
 extension APIService: TargetType {
@@ -25,6 +27,10 @@ extension APIService: TargetType {
             return URL(string: "https://api.themoviedb.org/3/search/movie")!
         case .allMoviesRequest:
             return URL(string: "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc")!
+        case .allTopRated:
+            return URL(string: "https://api.themoviedb.org/3/movie/top_rated")!
+        case .allUpcoming:
+            return URL(string: "https://api.themoviedb.org/3/movie/upcoming")!
         }
     }
 
@@ -37,6 +43,10 @@ extension APIService: TargetType {
         case .searchMovies:
             return .get
         case .allMoviesRequest:
+            return .get
+        case .allTopRated:
+            return .get
+        case .allUpcoming:
             return .get
         }
     }
@@ -51,23 +61,25 @@ extension APIService: TargetType {
 
     var parameters: [String : Any] {
         switch self {
-        case .searchMovies(let title, let type, let year):
+        case .searchMovies(let title):
 
             var parameters = [String:Any]()
             parameters["api_key"] = API_KEY
             parameters["query"] = title
 
-            if let type = type{
-                parameters["type"] = type
-            }
-
-            if let year = year {
-                parameters["primary_release_year"] = year
-            }
-
             return parameters
 
         case .allMoviesRequest:
+            var parameters = [String:Any]()
+            parameters["api_key"] = API_KEY
+            return parameters
+
+        case .allTopRated:
+            var parameters = [String:Any]()
+            parameters["api_key"] = API_KEY
+            return parameters
+            
+        case .allUpcoming:
             var parameters = [String:Any]()
             parameters["api_key"] = API_KEY
             return parameters
